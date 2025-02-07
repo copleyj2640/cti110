@@ -1,0 +1,29 @@
+# John Copley
+# 02-07-25
+# P1HW2
+#Create a program that does some basic math on numbers that are entered
+
+#Ask user to enter their budget
+budget = int(input("Enter your budget: "))  
+#Ask user to enter travel destination
+destination = str(input("\nWhat is your travel destination: "))
+#Ask user for amount they will spend on gas
+fuel = int(input("\nHow much will you spend on fuel? "))
+#Ask user for amount they will spend on accommodation
+lodging = int(input("\nHow much is your lodging? "))
+#Ask user for amount they will spend on food
+food = int(input("\nWhat is your budget for food? "))
+
+print("\n---------Travel Expenses--------\n")
+#Add expenses
+total_expenses = fuel + lodging + food
+#Subtract expenses from budget
+remaining = budget - total_expenses 
+#Display results
+print("Location:", destination,)
+print("Initial Budget:", budget,)
+
+print("\nFuel Budget:", fuel,)
+print("Lodging Budget:", lodging,)
+print("Food Budget:", food,)
+print("\nYour Remaining Balance is:", remaining,)
