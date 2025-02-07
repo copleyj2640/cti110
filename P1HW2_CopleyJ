@@ -20,10 +20,10 @@ total_expenses = fuel + lodging + food
 #Subtract expenses from budget
 remaining = budget - total_expenses 
 #Display results
-print("Location:", destination,)
-print("Initial Budget:", budget,)
+print("Location:", destination)
+print("Initial Budget:", budget)
 
-print("\nFuel Budget:", fuel,)
-print("Lodging Budget:", lodging,)
-print("Food Budget:", food,)
-print("\nYour Remaining Balance is:", remaining,)
+print("\nFuel Budget:", fuel)
+print("Lodging Budget:", lodging)
+print("Food Budget:", food)
+print("\nYour Remaining Balance is:", remaining)
