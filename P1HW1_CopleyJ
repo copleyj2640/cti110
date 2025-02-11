@@ -1,0 +1,19 @@
+# John Copley
+# 02-06-2025
+# P1HW1
+# Code for finding exponents and addition & subtraction
+print("-----Calculating Exponents----\n")
+ 
+baseval = int(input('Enter an integer as the base value: '))
+expoval = int(input('Enter an integer as the exponent: '))
+result = baseval ** expoval
+print("\n",baseval,"raised to the power of ",expoval," is",result,"!!") 
+print("\n-----Addition and Subtraction----\n")
+startval = int(input("Enter a starting integer: "))
+addval = int(input("Enter an integer to add: "))
+subval = int(input("Enter an integer to subtract: "))
+asresult = startval + addval -subval
+print("\n",startval,"+", addval, "-",subval,"is equal to", asresult)
+
+
+
