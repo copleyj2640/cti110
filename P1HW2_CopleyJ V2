@@ -1,0 +1,24 @@
+#Ask user to enter their budget
+budget = float(input("Enter your budget: "))  
+#Ask user to enter travel destination
+destination = str(input("\nWhat is your travel destination: "))
+#Ask user for amount they will spend on gas
+fuel = float(input("\nHow much will you spend on fuel? "))
+#Ask user for amount they will spend on accommodation
+lodging = float(input("\nHow much is your lodging? "))
+#Ask user for amount they will spend on food
+food = float(input("\nWhat is your budget for food? "))
+
+print("\n---------Travel Expenses--------\n")
+#Add expenses
+total_expenses = fuel + lodging + food
+#Subtract expenses from budget
+remaining = budget - total_expenses 
+#Display results
+print("Location: ", destination)
+print(f"Initial Budget: { budget:.2f}")
+
+print(f"\nFuel Budget: { fuel:.2f}")
+print(f"Lodging Budget: { lodging:.2f}")
+print(f"Food Budget: { food:.2f}")
+print(f"\nYour Remaining Balance is: { remaining:.2f}")
