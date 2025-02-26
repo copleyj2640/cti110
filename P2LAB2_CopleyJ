@@ -2,18 +2,28 @@
 # 25Feb2025
 # P2LAB2
 # Using a dictionary to store user input and displays output to the user
+
 #create dictionary
 cars={"Camaro": 18.21,
       "Prius": 52.36,
       "Model S": 110,
       "Silverado": 26
       }
+
 #display results of all keys in dictionary
 keys = cars.keys()
 print(keys)
 print()
-car_input=input("Enter a vehicle to see it's mpg: ")
+car_input=input("Enter a vehicle to see its mpg: ")
 print()
 mpg_output=cars[car_input]                
+
 #display output
 print(f"The {car_input} gets {mpg_output} mpg.\n")
+miles = float(input(f"How many miles will you drive the {car_input}? "))
+    
+# calculate gallons needed
+gallons_needed = miles / mpg_output
+
+# display output 
+print(f"\n{gallons_needed:.2f} gallon(s) of gas are needed to drive the {car_input} {miles:,.1f} miles.")
