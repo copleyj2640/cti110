@@ -1,0 +1,41 @@
+#John Copley
+
+#04MAR25
+
+#P2HW2
+
+#Assignment assess student understanding of Lists
+
+#create module inputs
+mod1=float(input("Enter grade for Module 1: "))
+
+mod2=float(input("Enter grade for Module 2: "))
+
+mod3=float(input("Enter grade for Module 3: "))
+
+mod4=float(input("Enter grade for Module 4: "))
+
+mod5=float(input("Enter grade for Module 5: "))
+
+mod6=float(input("Enter grade for Module 6: "))
+#create list
+gradelist=[]
+gradelist=[mod1,mod2,mod3,mod4,mod5,mod6]
+
+
+
+#The lowest grade in the list
+lowest=min(gradelist)
+#The highest grade in the list
+highest=max(gradelist)
+#Sum of grades
+total=sum(gradelist)
+#The grades' average
+average=total/len(gradelist)
+#print results
+print("\n---------Results---------")
+print(f'{"Lowest Grade: ":<20}{lowest}')
+print(f'{"Highest Grade: ":<20}{highest}')
+print(f'{"Sum of Grades: ":<20}{total}')
+print(f'{"Average Grade: ":<20}{average:.2f}')
+print('-'*30)
