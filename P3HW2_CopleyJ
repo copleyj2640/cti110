@@ -1,0 +1,27 @@
+# John Copley
+# 16MAR25
+# P3HW2
+# This program determines an employee's pay.
+
+# get user input
+employee_name = input("Enter employee's name: ")
+hours_worked = float(input("Enter number of hours worked this week: "))
+pay_rate = float(input("Enter employee's pay rate: "))
+
+# determine overtime hours
+overtime_hours = max(0, hours_worked - 40)
+regular_hours = hours_worked - overtime_hours
+
+# calculate pay
+overtime_pay = overtime_hours * (pay_rate * 1.5)
+regular_pay = regular_hours * pay_rate
+gross_pay = regular_pay + overtime_pay
+
+# display results 
+print("\nEmployee Payroll Information")
+print(f"Employee name: {employee_name}")
+print("\n{:<15}{:<10}{:<10}{:<15}{:<15}{:<15}{:<15}".format(
+"Hours Worked", "Pay Rate", "OverTime", "OverTime Pay", "RegHour Pay", "Gross Pay", ""))
+print("-" * 80)
+print("{:<15.1f}{:<10.2f}{:<10.1f}${:<14.2f}${:<14.2f}${:<14.2f}".format(
+hours_worked, pay_rate, overtime_hours, overtime_pay, regular_pay, gross_pay))
