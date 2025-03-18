@@ -20,8 +20,8 @@ gross_pay = regular_pay + overtime_pay
 # display results 
 print("\nEmployee Payroll Information")
 print(f"Employee name: {employee_name}")
-print("\n{:<15}{:<10}{:<10}{:<15}{:<15}{:<15}{:<15}".format(
-"Hours Worked", "Pay Rate", "OverTime", "OverTime Pay", "RegHour Pay", "Gross Pay", ""))
-print("-" * 80)
+print("\n{:<15}{:<10}{:<10}{:<15}{:<15}{:<15}".format(
+"Hours Worked", "Pay Rate", "OverTime", "OverTime Pay", "RegHour Pay", "Gross Pay"))
+print("-" * 70)
 print("{:<15.1f}{:<10.2f}{:<10.1f}${:<14.2f}${:<14.2f}${:<14.2f}".format(
 hours_worked, pay_rate, overtime_hours, overtime_pay, regular_pay, gross_pay))
