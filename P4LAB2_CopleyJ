@@ -1,0 +1,13 @@
+keep_going='yes'
+
+while keep_going.lower() =='yes':
+    num=int(input("\nEnter an integer: "))
+    print()
+    if(num>=0):
+        for i in range (1,13):
+            print(f'{num} * {i} = {num*i}')
+    else:
+        print("This program  does not handle negative numbers")
+    keep_going= input("\nDo you want to enter more numbers? Enter yes or no: ")
+print()
+print("Exiting the program....")
