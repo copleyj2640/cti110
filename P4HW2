@@ -1,0 +1,65 @@
+# John Copley
+
+# 01Apr25
+
+# P4HW2
+
+# Program will calculate gross pay for multiple employees
+
+name=input("\nEnter employee's name or 'Done' to terminate: ")
+#set accumulators
+overtime_total=0
+regPay_total=0
+gross_total=0
+employee_count=0
+while name!="Done":
+
+    #add one to employee_count variable
+
+    employee_count+=1
+
+    #ask for info
+
+    hours_worked=float(input(f"How many hours did {name} work: "))
+    pay_rate=float(input(f"What is {name}'s pay rate: "))
+
+    # determine overtime hours
+    if hours_worked<40:
+        regular_pay = hours_worked * pay_rate
+        gross_pay = regular_pay
+        overtime_pay = 0
+        overtime_hours = 0
+        overtime_total += overtime_pay
+        regPay_total += regular_pay   
+        gross_total += gross_pay
+    else:
+        regular_pay = 40 * pay_rate
+
+        #calculate overtime hours
+        overtime_hours = hours_worked - 40
+        overtime_pay = overtime_hours * (pay_rate * 1.5)
+        gross_pay = overtime_pay + regular_pay 
+        overtime_total += overtime_pay
+        regPay_total += regular_pay   
+        gross_total += gross_pay
+    
+    # calculate pay
+    
+
+    # display results 
+    print("\nEmployee Payroll Information")
+    print(f"Employee name: {name}")
+    print("\n{:<15}{:<10}{:<10}{:<15}{:<15}{:<15}".format(
+    "Hours Worked", "Pay Rate", "OverTime", "OverTime Pay", "RegHour Pay", "Gross Pay"))
+    print("-" * 70)
+    print("{:<15.1f}{:<10.2f}{:<10.1f}${:<15.2f}${:<15.2f}${:<15.2f}".format(
+    hours_worked, pay_rate, overtime_hours, overtime_pay, regular_pay, gross_pay))
+    print()
+    name=input("\nEnter employee's name or 'Done' to terminate: ") 
+
+# display total payroll info
+
+print(f"\nTotal number of employees entered: {employee_count}")
+print(f"Total amount paid for overtime: ${overtime_total:.2f}")
+print(f"Total amount paid for regular hours: ${regPay_total:.2f}")
+print(f"Total amount paid in gross: ${gross_total:.2f}")
